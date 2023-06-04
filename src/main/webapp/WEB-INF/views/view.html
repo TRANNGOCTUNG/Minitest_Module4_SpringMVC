@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="/layout :: head">
+    <meta charset="UTF-8">
+    <title>View</title>
+</head>
+<body>
+<h3>View Product</h3>
+<p>
+    <a th:href="@{/products}">
+        Back to customer list
+    </a>
+</p>
+<div id="detail">
+    <div class="cusdetail">
+        <label>Title:</label>
+        <label th:text="${products.title}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Content:</label>
+        <label th:text="${products.content}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Create_date:</label>
+        <label th:text="${products.created_date}"></label>
+    </div>
+</div>
+
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
